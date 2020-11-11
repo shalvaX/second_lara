@@ -61,6 +61,10 @@
             margin:10px;
             float:left;
             padding:10px;
+            position: relative;
+        }
+        .inside {
+            padding:10px
         }
     </style>
 </head>

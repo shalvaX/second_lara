@@ -14,12 +14,13 @@ class UpdateCarsTable extends Migration
     public function up()
     {
         Schema::table('cars', function (Blueprint $table) {
-            $table->string('name');
-            $table->string('make');
-            $table->string('model');
-            $table->string('license_number');
-            $table->float('weight');
-            $table->date('registration_year');
+            $table->string('name')->nullable();
+            $table->string('make')->nullable();
+            $table->string('model')->nullable();
+            $table->string('license_number')->nullable();
+            $table->float('weight')->nullable();
+            $table->date('registration_year')->nullable();
+            $table-> float('age')->nullable();
         });
     }
     /**

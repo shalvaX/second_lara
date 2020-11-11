@@ -6,5 +6,5 @@
     <div class = "list">License number  |</div>
     <div class = "list">Weight  |</div>
     <div class = "list">Registration year  |</div>
-
+    <div class = "list">Age |</div>
 @endsection

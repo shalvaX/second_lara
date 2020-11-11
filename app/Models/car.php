@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class car extends Model
 {
-    protected $table = 'cars';
+    public $fillable = ['name','make','model','license_number','weight','registration_year'];
+    public $guarded = ['age'];
+    public $table = 'cars';
+    public $timestamps = true;
 }
