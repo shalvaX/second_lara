@@ -18,7 +18,7 @@
                 <li>{{$cr->license_number}}</li>
                 <li>{{$cr->weight}}</li>
                 <li>{{$cr->registration_year}}</li>
-                <li>{{ getAge() }}</li>
+                <li>{{$cr->getAge()}}</li>
             </ul>
         @endforeach
         <form action="cars/create" method="POST">
@@ -29,7 +29,6 @@
                 <li><input type="text" name="license_number" id="license_number"></li>
                 <li><input type="text" name="weight" id="weight"></li>
                 <li><input type="text" name="registration_year" id="registration_year"></li>
-                <li><input type="text" name="age" id="age"></li>
                 <li><button type="submit" style="background:grey;">Save</button></li>
             </ul>
         </form>
