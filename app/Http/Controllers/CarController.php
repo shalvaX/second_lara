@@ -7,18 +7,9 @@ use App\Models\car;
 
 class CarController extends Controller
 {
-    public function createCar(){
-        car::create([
-            "name"=>"hoe",
-            'model'=>'2dsf',
-            'make'=>'dsf',
-            'license_number' => 'rr.r33.33',
-            'weight' => 23,
-            'registration_year' => '2020-11-11 21:52:06',
-            'age' => 423
-        ]);
+    public function createCar(Request $request){
         $cars = car::all();
-        return redirect('/car');
+        return view('create-page')->with('cars',$cars);
     }
 
     public function viewCars(){

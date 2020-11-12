@@ -1,19 +1,26 @@
 @extends('layouts.main')
 @section('content')
-    <div class = "list"><div class = "inside">Name  | </div></div>
-    <div class = "list"><div class = "inside">Make  | </div></div>
-    <div class = "list"><div class = "inside">License Number  | </div></div>
-    <div class = "list"><div class = "inside">Name  | </div></div>
-    <div class = "list"><div class = "inside">Name  | </div></div>
-    <div class = "list"><div class = "inside">Name  | </div></div>
-    <div class = "list"><div class = "inside">Name  | </div></div> <br>
+    <nav>
+        <ul>
+            <li>Name</li>
+            <li class="active">Maker</li>
+            <li>License Number</li>
+            <li>Weight</li>
+            <li>Registration Year</li>
+            <li>Age</li>
+        </ul>
+    </nav>
+    <nav>
     @foreach($cars as $cr)
-        <div class="list">{{$cr->name}} |</div>
-        <div class="list">{{$cr->make}} |</div>
-        <div class="list">{{$cr->license_number}} |</div>
-        <div class="list">{{$cr->weight}} |</div>
-        <div class="list">{{$cr->registration_year}} |</div>
-        <div class="list">{{$cr->age}}  |</div><br>
+            <ul>
+                <li>{{$cr->name}}</li>
+                <li class="active">{{$cr->make}}</li>
+                <li>{{$cr->license_number}}</li>
+                <li>{{$cr->weight}}</li>
+                <li>{{$cr->registration_year}}</li>
+                <li>{{$cr->age}}</li>
+            </ul>
     @endforeach
-
+    </nav>
+    <a href="/car/create">Create new</a>
 @endsection
