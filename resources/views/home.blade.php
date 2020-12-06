@@ -21,7 +21,7 @@
                 <li>{{$cr->getAge()}}</li>
             </ul>
         @endforeach
-        <form action="cars/create" method="POST">
+        <form action="companies/create" method="POST">
             @csrf
             <ul>
                 <li><input type="text" name="name" id="name"></li>
